@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2><center>Student Detail</center>    </h2>
+
+<div class="card border-primary mb-3" style="width: 18rem;">
+    <img src="#" alt="" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{student.first_name}} </h5>
+      <p class="card-text">{{student.email}}</p>
+      <p class="card-text">{{student.phone}}</p>
+      <p class="card-text">{{student.path}}</p>
+      <a href="{% url 'update' student.id %}" class="btn btn-primary">Edit</a>
+      <a href="{% url 'delete' student.id %}" class="btn btn-danger">Delete</a>
+      <a href="{% url 'list' %}">
+        <button class="btn btn-secondary"><i class="fas fa-plus text-success"></i> Back to Students</button>
+    </a>
+    </div>
+
+    
+{% endblock content %}

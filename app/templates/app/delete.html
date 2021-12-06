@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<title>Detail Page</title>
+    
+<form method="POST">
+    {% csrf_token %}
+    Are you sure  ?
+    <input type="submit" value="Yes" />
+    <a href="{% url 'list' %}">Cancel </a>
+</form>
+    
+{% endblock content %}

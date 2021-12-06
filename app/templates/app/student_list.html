@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+<center>
+  <div class="row">
+    <hr />
+    <h2 class="fs-1 text-uppercase">Student Register</h2>
+    <p class="fst-italic">
+      A simple Python project for implementing CRUD operations
+    </p>
+    <hr />
+  </div>
+</center>
+<div class="row" >
+  {% load crispy_forms_tags %} {% for student in students %}
+  <ul>
+    {{ student}}
+    <a href="{% url 'detail' student.id %}" class="btn btn-primary fw-lighter fs-6 lh-sm">View Detail</a>
+
+    <a href="{% url 'update' student.id %}" class="btn">
+    <i class="far fa-edit"></i> </a>
+
+    <a href="{% url 'delete' student.id %}" class="btn">
+    <i class="far fa-trash-alt text-danger"></i></a>
+    <hr>
+      
+  </ul>
+  {% endfor %}
+
+  <div>
+    <center>
+        <a href="{% url 'add'%}">
+
+        <button class="btn btn-outline-success">
+            <i class="fas fa-plus text-success"></i> add new
+        </button>
+        </a>
+
+    </center>
+  </div>
+</div>
+
+
+{% endblock content%}

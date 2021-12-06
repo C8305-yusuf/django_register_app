@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div>
+    {% load crispy_forms_tags %}
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+        {{ form | crispy}}
+        <div class="row mb-3">
+            <div class="col-8">
+               
+                <button type="submit" class="btn btn-success col-12">
+                    <i class="fas fa-database"></i>
+                    update</button>
+               
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-secondary col-12" onClick="javascript:history.go(-1);">
+                    <i class="fas fa-stream"></i>
+                    cancel</button>
+            </div>
+        </div>      
+    </form>
+</div>
+<br><br>
+
+
+
+    
+
+    
+{% endblock content %}

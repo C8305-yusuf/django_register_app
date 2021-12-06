@@ -1,0 +1,28 @@
+body {
+    background-color: red;
+}
+
+h1{
+    font-size: 60px;
+    color: darkgreen;
+    
+}
+
+.navbar h1{
+    color: blueviolet;
+    display: block;
+}
+
+.navbar p{
+    font-size: small;
+    font-style: italic;
+    color: red;
+    display: block;
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+
